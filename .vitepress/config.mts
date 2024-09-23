@@ -62,6 +62,10 @@ export default defineConfig({
         base: "/paths/wordpress/",
         items: sidebarWordPress()
       },
+      "/paths/computer-system": {
+        base: "/paths/computer-system",
+        items: sidebarComputerSystem()
+      }
     },
     socialLinks: [
       { icon: "github", link: "https://github.com/ThaiProgrammer/tpa-path" },
@@ -782,64 +786,64 @@ function sidebarWordPress(): DefaultTheme.SidebarItem[] {
     {
       text: "WordPress",
       items: [
-        { 
-          text: "WordPress คืออะไร?", 
+        {
+          text: "WordPress คืออะไร?",
           collapsed: true,
           base: "/paths/wordpress/what-is-wordpress/",
           items: [
             { text: "WordPress คืออะไร?", link: "index.html" }
           ],
         },
-        { 
-          text: "โครงสร้างของ WordPress", 
+        {
+          text: "โครงสร้างของ WordPress",
           collapsed: true,
           base: "/paths/wordpress/structures/",
           items: [
             { text: "โครงสร้างของ WordPress คืออะไร?", link: "index.html" }
           ],
         },
-        { 
-          text: "การติดตั้ง WordPress", 
+        {
+          text: "การติดตั้ง WordPress",
           collapsed: true,
           base: "/paths/wordpress/installation/",
           items: [
             { text: "การติดตั้ง WordPress คืออะไร?", link: "index.html" }
           ],
         },
-        { 
-          text: "เครื่องมือสำหรับนักพัฒนา", 
+        {
+          text: "เครื่องมือสำหรับนักพัฒนา",
           collapsed: true,
           base: "/paths/wordpress/developer-tools/",
           items: [
             { text: "เครื่องมือสำหรับนักพัฒนา คืออะไร?", link: "index.html" }
           ],
         },
-        { 
-          text: "การพัฒนา Theme", 
+        {
+          text: "การพัฒนา Theme",
           collapsed: true,
           base: "/paths/wordpress/theme-development/",
           items: [
             { text: "การพัฒนา Theme คืออะไร?", link: "index.html" }
           ],
         },
-        { 
-          text: "การพัฒนา Plugin", 
+        {
+          text: "การพัฒนา Plugin",
           collapsed: true,
           base: "/paths/wordpress/plugin-development/",
           items: [
             { text: "การพัฒนา Plugin คืออะไร?", link: "index.html" }
           ],
         },
-        { 
-          text: "การปรับแต่งระบบ", 
+        {
+          text: "การปรับแต่งระบบ",
           collapsed: true,
           base: "/paths/wordpress/customization/",
           items: [
             { text: "การปรับแต่งระบบ คืออะไร?", link: "index.html" }
           ],
         },
-        { 
-          text: "Security", 
+        {
+          text: "Security",
           collapsed: true,
           base: "/paths/wordpress/security/",
           items: [
@@ -849,4 +853,32 @@ function sidebarWordPress(): DefaultTheme.SidebarItem[] {
       ],
     },
   ];
+}
+
+function sidebarComputerSystem(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: "Computer System",
+      items: [
+        {
+          text: "Computer Architecture",
+          collapsed: true,
+          base: "/paths/computer-system/computer-architecture/",
+          items: [
+            { text: "พื้นฐาน Computer Architecture", link: "fundamental" },
+            { text: "วงจร Transistor", link: "transistor"},
+            { text: "วงจรทางตรรกศาสตร์ (Logic Gate)", link: "logic-gate"}
+          ]
+        },
+        {
+          text: "Operating System",
+          collapsed: true,
+          base: "/paths/computer-system/operating-system/",
+          items: [
+            { text: "Operating System Naja", link: "index.html"}
+          ]
+        }
+      ]
+    }
+  ]
 }
